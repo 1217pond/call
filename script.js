@@ -88,6 +88,7 @@ function prep(){
           ve.srcObject = localStream;
           ve.width = 500;
           ve.muted = true;
+          ve.playsInline = true;
           ve.id = `video_${peer_id}`;
           ve.play();
           call_div.appendChild(ve);
