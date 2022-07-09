@@ -19,15 +19,14 @@
     </div>
     <div id="dest_form" hidden>
       <label>ルーム名</label><br>
-      <input type="text" id="room_input" size="10">
-      <button id="join">接続</button>
-      <label><input type="checkbox" id="cam" checked>カメラ</label>
-      <label><input type="checkbox" id="mic" checked>マイク</label>
+      <input type="text" id="room_input" size="30"><br>
+      <video id="preview" width="700" autoplay playsinline></video>
     </div>
     <div id="call_controller" hidden>
-      <button id="leave" style="color:red">接続解除</button>
-      <label><input type="checkbox" id="cam_cont" checked>カメラ</label>
-      <label><input type="checkbox" id="mic_cont" checked>マイク</label>
+      <button id="join">接続</button>
+      <button id="leave" style="color:red" hidden>接続解除</button>
+      <label><input type="checkbox" id="cam" checked>カメラ<select id="cam_slc"></select></label>
+      <label><input type="checkbox" id="mic" checked>マイク<select id="mic_slc"></select></label>
     </div>
     <div id="call_area"></div>
     <div id="chat_controller" hidden>
@@ -35,7 +34,7 @@
       <button id="send">送信</button>
     </div>
     <div id="chat_area" class="chat" hidden></div>
-    <p>v2.0.4 ©2022 1217pond<br>All rights reserved.</p>
+    <p>v2.1.0 ©2022 1217pond<br>All rights reserved.</p>
     <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
