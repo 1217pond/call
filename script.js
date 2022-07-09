@@ -27,6 +27,7 @@ document.getElementById("leave").addEventListener("click",() => {
 
 document.getElementById("send").addEventListener("click",() => {
   let send_el = document.getElementById("send_input");
+  chat_push(`${nameplate}: ${send_el.value}`);
   Room.send({type:"send",text:send_el.value});
   send_el.value = "";
 });
